@@ -801,5 +801,10 @@ small span {
     .project-item:not(:last-child) {
         margin-right: 0px;
     }
+
+    .post > img {
+        width: 100%;
+        height: 100%;
+    }
 }
 

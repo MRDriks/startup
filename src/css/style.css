@@ -342,8 +342,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #c0301c;
-    opacity: 0;
+    background-color: rgba(192, 48, 28, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -351,8 +350,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 .project-item:hover .project-item__layout {
-    opacity: 1;
+    background-color: rgba(192, 48, 28, 0.7);
     transition-duration: 0.7s;
+}
+
+.project-item:hover .project-item__layout h3,
+.project-item:hover .project-item__layout p,
+.project-item:hover .project-item__layout a {
+    opacity: 1;   
 }
 
 .project-item__layout h3 {
@@ -360,6 +365,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     font-family: "Montserrat";
     font-size: 18px;
     font-weight: 500;
+    opacity: 0;
 }
 
 .project-item__layout p {
@@ -368,6 +374,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     font-size: 12px;
     font-weight: 400;
     margin: 16px 0 40px;
+    opacity: 0;
 }
 
 .project-item__layout a {
@@ -379,6 +386,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     letter-spacing: 1.4px;
     padding: 15px 25px;
     background-color: #ffffff;
+    opacity: 0;
 }
 
 .project-item__layout a:hover {
@@ -398,7 +406,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     justify-content: center;
 }
 
-.parallax-section p {
+.parallax-section h2 {
     color: #ffffff;
     font-family: "Roboto Slab";
     font-size: 30px;
@@ -515,7 +523,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 .clients-logo {
-    max-width: 900;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -744,6 +751,29 @@ small span {
         display: block;
         margin-top: 50px;
     }
+
+    .wrapper {
+        overflow-x: hidden;
+    }
+
+    .header__text {
+        padding: 175px 0 0 0;
+    }
+
+    .about-us-section__text-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        padding-right: 0px;
+    }
+
 }
 
 @media (max-width: 865px) {
@@ -795,9 +825,7 @@ small span {
         width: 100%;
         margin-left: 0;
     }
-}
 
-@media (max-width: 907px){
     .project-item:not(:last-child) {
         margin-right: 0px;
     }

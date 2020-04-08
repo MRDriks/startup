@@ -42,6 +42,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .header {
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 
 .container {
@@ -97,6 +98,43 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    z-index: 100;
+}
+
+.nav-burger {
+    display: none;
+    z-index: 100;
+}
+
+.nav-layout {
+    width: 100%;
+    height: 100vh;
+    background-color: #c0301c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition-duration: 0.5s;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-layout.active {
+    transform: translateY(0%);
+    transition-duration: 0.5s;
+}
+
+.nav-layout a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.35px;
+    padding-bottom: 30px;
 }
 
 .header__text h1 {
@@ -737,6 +775,64 @@ small span {
 @media (max-width: 770px) {
     .header__menu {
         display: none;
+    }
+
+    .nav-burger {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+    }
+
+    .nav-burger span {
+        width: 100%;
+        height: 2px;
+        background-color: #ffffff;
+        position: absolute;
+        left: 0;
+        top: 9px;
+        transition-duration: 0.3s;
+    }
+
+    .nav-burger::after,
+    .nav-burger::before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #ffffff;
+        position: absolute;
+        left: 0;
+    }
+
+    .nav-burger::after {
+        top: 0;
+        transition-duration: 0.3s;
+    }
+
+    .nav-burger::before {
+        bottom: 0;
+        transition-duration: 0.3s;
+    }
+
+    .nav-burger:hover {
+        cursor: pointer;
+    }
+
+    .nav-burger.active span {
+        transform: translateX(100px);
+        transition-duration: 0.3s;
+    }
+
+    .nav-burger.active::before {
+        transform: rotate(45deg);
+        bottom: 9px;
+        transition-duration: 0.3s;
+    }
+
+    .nav-burger.active::after {
+        transform: rotate(-45deg);
+        top: 9px;
+        transition-duration: 0.3s;
     }
 
     .services-section__body {

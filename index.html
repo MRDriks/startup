@@ -10,12 +10,23 @@
     <link rel="stylesheet" href="css/style.min.css">  
 </head>
 <body>
-
     <div class="wrapper">
         <header class="header" data-parallax="scroll" data-image-src="img/header-bg.png">
+            <div class="nav-layout">
+                <a href="#">Home</a>
+                <a href="#services-section" class="scroll">Services</a>
+                <a href="#about-us-section" class="scroll">About</a>
+                <a href="#works-section" class="scroll">Works</a>
+                <a href="#blog-section" class="scroll">Blog</a>
+                <a href="#clients-section" class="scroll">Clients</a>
+                <a href="#contact-us" class="scroll">Contact</a>
+            </div>
             <div class="container">
                 <nav class="header__nav">
                     <span class="logo">Startup</span>
+                    <div class="nav-burger">
+                        <span></span>
+                    </div>
                     <ul class="header__menu">
                         <li>
                             <a href="#" class="js-trigger">Home</a>
@@ -38,7 +49,6 @@
                         <li>
                             <a href="#contact-us" class="scroll">Contact</a>
                         </li>
-    
                     </ul>
                 </nav>
                 <div class="header__title">
@@ -464,5 +474,6 @@
     <script src="js/aos.min.js"></script>
     <script src="js/scroll.min.js"></script>
     <script>AOS.init();</script>
+    <script src="js/main.js"></script>
 </body>
 </html>

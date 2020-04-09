@@ -50,6 +50,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     margin: 0 auto;
 }
 
+.wrapper {
+    overflow-x: hidden;
+}
+
 .header__nav {
     display: flex;
     justify-content: space-between;
@@ -848,14 +852,6 @@ small span {
         margin-top: 50px;
     }
 
-    .wrapper {
-        overflow-x: hidden;
-    }
-
-    .header__text {
-        padding: 175px 0 0 0;
-    }
-
     .about-us-section__text-info {
         display: flex;
         flex-direction: column;
@@ -868,6 +864,12 @@ small span {
 
     .team-member {
         padding-right: 0px;
+    }
+
+    
+    .about-us-section__text-info {
+        text-align: center;
+        align-items: center;
     }
 
 }
@@ -931,4 +933,3 @@ small span {
         height: 100%;
     }
 }
-

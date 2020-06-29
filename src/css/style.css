@@ -48,6 +48,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .container {
     width: 82%;
     margin: 0 auto;
+    height: 100%;
 }
 
 .wrapper {
@@ -94,7 +95,13 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .header__text {
     text-align: center;
-    padding: 260px 0 0 0;
+}
+
+.header__content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
@@ -143,7 +150,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .header__text h1 {
     color: #ffffff;
-    font-size: 48px;
+    font-size: calc(36px + 12 * ((100vw - 320px) / (1400 - 320)));
     font-weight: 500;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
